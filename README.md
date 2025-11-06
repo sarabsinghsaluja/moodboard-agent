@@ -60,16 +60,44 @@ Edit `.env` with your API keys:
 - Get Anthropic key: https://console.anthropic.com/
 - Get Spotify credentials: https://developer.spotify.com/dashboard
 
-### Running the API
+### Running the Application
 
+**Backend (FastAPI):**
 ```bash
 # From the project root
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 python -m uvicorn src.api:app --reload
 ```
 
 The API will be available at: `http://localhost:8000`
 
 Interactive API docs: `http://localhost:8000/docs`
+
+**Frontend (React UI):**
+```bash
+cd frontend
+npm start
+```
+
+The web UI will open at: `http://localhost:3000`
+
+### Using the Web Interface
+
+1. Open `http://localhost:3000` in your browser
+2. Drag & drop an image or click to browse
+3. Wait for AI analysis (a few seconds)
+4. View detected mood with confidence score
+5. Browse Spotify music recommendations with previews
+6. Click "Analyze Another Image" to start over
+
+**Features:**
+- 📸 Drag & drop image upload
+- 🎨 Real-time mood detection
+- 🎵 Spotify track recommendations with album art
+- 🔊 Audio previews for tracks
+- 🔗 Direct links to open tracks in Spotify
+- 📱 Fully responsive design
+- 🔄 Reset button to analyze multiple images
 
 ## API Endpoints
 
@@ -171,12 +199,24 @@ moodboard-agent/
 │   ├── image_analyzer.py       # AI vision mood detection
 │   ├── music_matcher.py        # Spotify integration
 │   └── mood_classifier.py      # Mood definitions
+├── frontend/                   # React web UI
+│   ├── public/
+│   ├── src/
+│   │   ├── components/         # React components
+│   │   │   ├── ImageUpload.js  # Drag & drop upload
+│   │   │   ├── MoodDisplay.js  # Mood visualization
+│   │   │   └── MusicRecommendations.js  # Track listings
+│   │   ├── App.js              # Main React app
+│   │   └── App.css             # Styles
+│   ├── package.json
+│   └── package-lock.json
 ├── data/
 │   └── mood_music_mappings.json  # Mood-to-music configurations
 ├── models/                     # (Optional) Local ML models
 ├── tests/                      # Unit tests
 ├── requirements.txt            # Python dependencies
 ├── .env.example               # Environment template
+├── .gitignore
 └── README.md
 ```
 
@@ -232,12 +272,14 @@ Spotify recommendations use:
 ## Future Enhancements
 
 - [ ] Add local ML models (CLIP, ViT) for offline mood detection
-- [ ] Create web UI for image upload and visualization
+- [x] ~~Create web UI for image upload and visualization~~ ✅ Complete!
 - [ ] Support for video mood analysis
 - [ ] Generate custom Spotify playlists (requires user auth)
 - [ ] Multi-language support
 - [ ] Batch image processing
 - [ ] Mood history tracking and analytics
+- [ ] Mobile app (React Native)
+- [ ] Social sharing features
 
 ## Troubleshooting
 
