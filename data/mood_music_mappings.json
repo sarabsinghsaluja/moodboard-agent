@@ -1,0 +1,132 @@
+{
+  "mood_mappings": {
+    "calm": {
+      "spotify_genres": ["ambient", "chill", "lo-fi", "classical", "acoustic", "new age"],
+      "example_artists": ["Brian Eno", "Nils Frahm", "Ólafur Arnalds", "Max Richter"],
+      "audio_features": {
+        "energy": 0.2,
+        "valence": 0.6,
+        "tempo": 75,
+        "acousticness": 0.7,
+        "instrumentalness": 0.6
+      }
+    },
+    "energetic": {
+      "spotify_genres": ["edm", "pop", "rock", "electronic", "dance", "house"],
+      "example_artists": ["Calvin Harris", "Dua Lipa", "The Killers", "Imagine Dragons"],
+      "audio_features": {
+        "energy": 0.9,
+        "valence": 0.8,
+        "tempo": 140,
+        "danceability": 0.8,
+        "instrumentalness": 0.3
+      }
+    },
+    "romantic": {
+      "spotify_genres": ["r-n-b", "soul", "jazz", "love songs", "romantic"],
+      "example_artists": ["Frank Sinatra", "Norah Jones", "John Legend", "Alicia Keys"],
+      "audio_features": {
+        "energy": 0.4,
+        "valence": 0.7,
+        "tempo": 85,
+        "acousticness": 0.5,
+        "instrumentalness": 0.2
+      }
+    },
+    "dark": {
+      "spotify_genres": ["industrial", "metal", "dark ambient", "goth", "techno", "darkwave"],
+      "example_artists": ["Nine Inch Nails", "Depeche Mode", "Tool", "Massive Attack"],
+      "audio_features": {
+        "energy": 0.6,
+        "valence": 0.2,
+        "tempo": 100,
+        "instrumentalness": 0.5,
+        "acousticness": 0.2
+      }
+    },
+    "melancholic": {
+      "spotify_genres": ["indie", "folk", "blues", "sad", "alternative", "singer-songwriter"],
+      "example_artists": ["Bon Iver", "Elliott Smith", "The National", "Radiohead"],
+      "audio_features": {
+        "energy": 0.3,
+        "valence": 0.3,
+        "tempo": 70,
+        "acousticness": 0.6,
+        "instrumentalness": 0.3
+      }
+    },
+    "joyful": {
+      "spotify_genres": ["pop", "funk", "disco", "happy", "uplifting", "party"],
+      "example_artists": ["Pharrell Williams", "Earth Wind & Fire", "ABBA", "Mark Ronson"],
+      "audio_features": {
+        "energy": 0.8,
+        "valence": 0.9,
+        "tempo": 120,
+        "danceability": 0.8,
+        "instrumentalness": 0.2
+      }
+    },
+    "mysterious": {
+      "spotify_genres": ["ambient", "electronic", "experimental", "cinematic", "downtempo"],
+      "example_artists": ["Boards of Canada", "Aphex Twin", "Jon Hopkins", "Arca"],
+      "audio_features": {
+        "energy": 0.5,
+        "valence": 0.5,
+        "tempo": 90,
+        "instrumentalness": 0.7,
+        "acousticness": 0.3
+      }
+    },
+    "aggressive": {
+      "spotify_genres": ["metal", "hardcore", "punk", "hard rock", "drum-n-bass", "dubstep"],
+      "example_artists": ["Metallica", "Slipknot", "Rage Against The Machine", "Skrillex"],
+      "audio_features": {
+        "energy": 0.95,
+        "valence": 0.3,
+        "tempo": 160,
+        "loudness": 0.9,
+        "instrumentalness": 0.4
+      }
+    },
+    "dreamy": {
+      "spotify_genres": ["ambient", "dream-pop", "shoegaze", "indie", "chillwave", "psychedelic"],
+      "example_artists": ["Beach House", "Mazzy Star", "Slowdive", "Cocteau Twins"],
+      "audio_features": {
+        "energy": 0.3,
+        "valence": 0.7,
+        "tempo": 80,
+        "instrumentalness": 0.5,
+        "acousticness": 0.4
+      }
+    },
+    "uplifting": {
+      "spotify_genres": ["trance", "progressive", "inspirational", "anthemic", "euphoric"],
+      "example_artists": ["Above & Beyond", "Armin van Buuren", "Coldplay", "U2"],
+      "audio_features": {
+        "energy": 0.7,
+        "valence": 0.85,
+        "tempo": 128,
+        "danceability": 0.6,
+        "instrumentalness": 0.5
+      }
+    }
+  },
+  "color_mood_associations": {
+    "warm_colors": ["energetic", "joyful", "romantic"],
+    "cool_colors": ["calm", "melancholic", "mysterious"],
+    "bright_colors": ["joyful", "energetic", "uplifting"],
+    "dark_colors": ["dark", "melancholic", "mysterious"],
+    "saturated_colors": ["energetic", "aggressive", "joyful"],
+    "desaturated_colors": ["calm", "melancholic", "dreamy"]
+  },
+  "scene_mood_associations": {
+    "nature_peaceful": ["calm", "dreamy", "uplifting"],
+    "nature_dramatic": ["mysterious", "dark", "uplifting"],
+    "urban_day": ["energetic", "joyful"],
+    "urban_night": ["dark", "mysterious", "romantic"],
+    "people_celebrating": ["joyful", "energetic"],
+    "people_intimate": ["romantic", "calm"],
+    "abstract_chaotic": ["aggressive", "energetic", "mysterious"],
+    "abstract_minimal": ["calm", "mysterious", "dreamy"]
+  }
+}
