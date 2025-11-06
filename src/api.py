@@ -9,6 +9,10 @@ from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 from typing import List, Optional
 import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 from .image_analyzer import ImageMoodAnalyzer
 from .music_matcher import MusicMatcher
@@ -297,6 +301,9 @@ async def analyze_full(
         }
 
     except Exception as e:
+        import traceback
+        print(f"Error during analysis: {str(e)}")
+        print(traceback.format_exc())
         raise HTTPException(
             status_code=500,
             detail=f"Error during analysis: {str(e)}"

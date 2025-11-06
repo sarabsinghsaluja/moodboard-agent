@@ -1,0 +1,94 @@
+.image-upload-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+.upload-area {
+  border: 3px dashed #ccc;
+  border-radius: 12px;
+  padding: 3rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #f9f9f9;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.upload-area:hover {
+  border-color: #1db954;
+  background-color: #f0f8f4;
+}
+
+.upload-area.drag-active {
+  border-color: #1db954;
+  background-color: #e8f5e9;
+  transform: scale(1.02);
+}
+
+.upload-area.analyzing {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.upload-prompt {
+  width: 100%;
+}
+
+.upload-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.upload-text {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 0.5rem 0;
+  font-weight: 500;
+}
+
+.upload-subtext {
+  font-size: 1rem;
+  color: #666;
+  margin: 0.5rem 0;
+}
+
+.upload-formats {
+  font-size: 0.9rem;
+  color: #999;
+  margin-top: 1rem;
+}
+
+.preview-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.preview-image {
+  max-width: 100%;
+  max-height: 400px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .upload-area {
+    padding: 2rem 1rem;
+    min-height: 250px;
+  }
+
+  .upload-icon {
+    font-size: 3rem;
+  }
+
+  .upload-text {
+    font-size: 1rem;
+  }
+}
